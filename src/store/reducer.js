@@ -14,6 +14,7 @@ const defaultState = {
 * store接受到dispatch传递过来到action
 * (previousState当前state数据, action)
 * reducer 可以接受state,但是绝不能修改state
+* 纯函数指到是，给定固定到输入，就一定会有固定到输出，而且不会有任何到副作用
 * */
 export default (state = defaultState, action) => {
     console.log(state, action, '触发reducer，数据更新');
