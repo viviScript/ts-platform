@@ -1,8 +1,16 @@
 import React, {Component} from 'react';
-import { Input, Button, List } from 'antd';
-import store from '../../store/index.js'    // 引入redux数据
+import store from '../store'    // 引入redux数据
 // import { CHANGE_INPUT_VALUE, ADD_TODO_ITEM, DELETE_TODO_ITEM } from '../../store/actionTypes'    // 引入action常量
-import {getInputChangeAction, getAddItemAction, getDeleteTodoAction} from '../../store/actionCreators';    // 引入action方法
+import {
+    getInputChangeAction,
+    getAddItemAction,
+    getDeleteTodoAction,
+    // getTodoList,
+    getInitList
+} from '../store/actionCreators';    // 引入action方法
+import TodoListUi from './TodoListUi'
+// import axios from 'axios';
+require('../mock');    // 引入模拟数据
 class TodoList extends Component{
     constructor(props) {
         super(props);
@@ -12,28 +20,38 @@ class TodoList extends Component{
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleStoreChange = this.handleStoreChange.bind(this);
         this.handleBtnClick = this.handleBtnClick.bind(this);
+        this.handleItemDelete = this.handleItemDelete.bind(this)
         store.subscribe(this.handleStoreChange);   // 订阅store，并监听
     }
     render() {
         return (
-            <div>
-                <div style={{marginTop: '10px', marginLeft: '10px'}}>
-                    <Input
-                        value={this.state.inputValue}
-                        onChange={this.handleInputChange}
-                        placeholder='todo info' style={{width: '300px'}} />
-                    <Button onClick={this.handleBtnClick} type="primary">提交</Button>
-                </div>
-                <List
-                    size="large"
-                    style={{width: '300px', marginLeft: '10px'}}
-                    bordered
-                    dataSource={this.state.list}
-                    renderItem={(item, index) => (<List.Item onClick={this.handleItemDelete.bind(this,index)}>{item}</List.Item>)}
-                />
-            </div>
+            <TodoListUi
+                inputValue={this.state.inputValue}
+                handleInputChange={this.handleInputChange}
+                handleBtnClick={this.handleBtnClick}
+                handleItemDelete={this.handleItemDelete}
+                list={this.state.list}
+            />
         )
     }
+    componentDidMount() {
+        // 普通使用
+        // axios.get('/api/test').then((res) => {
+        //     console.log(res)
+        //     const data = res.data.list;
+        //     const action = initListAction(data);
+        //     store.dispatch(action)
+        // })
+
+        // 使用redux-thunk中action调用异步请求
+        // const action = getTodoList();
+        // store.dispatch(action);
+
+        // 使用redux-saga中action调用异步请求
+        const action = getInitList();
+        store.dispatch(action)
+    }
+
     handleInputChange (e) {
         // action描述
         // const action = {
