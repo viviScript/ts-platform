@@ -4,10 +4,7 @@ import {
     Form, Icon, Input, Button, Checkbox, Card, message
 } from 'antd';
 import { connect } from 'react-redux';
-import {
-    getUserNameChange,
-    getUserPassWordChange
-} from '../../store/actionCreators';
+import { actionCreators } from './store'
 import {
     getLogin
 } from '../../api/api';
@@ -77,18 +74,18 @@ class CfLogin extends Component{
 }
 const mapStateToProps = (state) => {
     return {
-        userName: state.reducer_login.userName,
-        userPassWord: state.reducer_login.userPassWord
+        userName: state.cfLoginReducer.userName,
+        userPassWord: state.cfLoginReducer.userPassWord
     }
 };
 const mapDispatchToProps = (dispatch) => {
     return {
         handleNameChange (e) {
-            const action = getUserNameChange(e.target.value);
+            const action = actionCreators.getUserNameChange(e.target.value);
             dispatch(action);
         },
         handlePassWordChange (e) {
-            const action = getUserPassWordChange(e.target.value);
+            const action = actionCreators.getUserPassWordChange(e.target.value);
             dispatch(action);
         }
     }

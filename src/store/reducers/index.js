@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
-import reducer_login from './reducer_login';
-
+import { reducer as cfLoginReducer } from '../../views/CfLogin/store';
 export default combineReducers({
-    reducer_login
+    cfLoginReducer
 })
