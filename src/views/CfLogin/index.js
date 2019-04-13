@@ -74,8 +74,8 @@ class CfLogin extends Component{
 }
 const mapStateToProps = (state) => {
     return {
-        userName: state.cfLoginReducer.userName,
-        userPassWord: state.cfLoginReducer.userPassWord
+        userName: state.get('cfLoginReducer').get('userName'),
+        userPassWord: state.get('cfLoginReducer').get('userPassWord')
     }
 };
 const mapDispatchToProps = (dispatch) => {
