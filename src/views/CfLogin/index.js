@@ -1,57 +1,22 @@
 import React, { Component } from 'react';
 import './style/index.scss'
 import {
-    Form, Icon, Input, Button, Checkbox, Card, message
+    Form, Icon, Input, Button, Checkbox, Card
 } from 'antd';
 import { connect } from 'react-redux';
 import { actionCreators } from './store'
-import {
-    getLogin
-} from '../../api/api';
-import {
-    USER_TOKEN
-} from '../../config/common.const';
-import {
-    setSession
-} from '../../util/index';
-class CfLogin extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: false
-        };
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(this.props);
-        this.setState({
-            loading: true
-        });
-        getLogin({
-            username: this.props.userName,
-            password: this.props.userPassWord
-        }).then(res => {
-            console.log(res, '登录');
-            if (res.data.code === '200') {
-                setSession(USER_TOKEN, res.data.data);
-                message.success('恭喜您，登录成功！');
-            }
-            this.setState({
-                loading: false
-            });
-        })
-    };
+
+class CfLogin extends Component{
     render() {
-        const { userName, userPassWord, handleNameChange, handlePassWordChange } = this.props;
+        const { userName, userPassWord, handleNameChange, handlePassWordChange, loading, handleSubmit } = this.props;
         return (
             <div className='login'>
                 <Card
                     title="用户登录"
                     style={{ width: 300 }}
                 >
-                    <Form onSubmit={this.handleSubmit} className="login-form">
+                    <Form onSubmit={(e) => {handleSubmit(e, userName, userPassWord)}} className="login-form">
                         <Form.Item>
                             <Input onChange={handleNameChange} value={userName} prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
                         </Form.Item>
@@ -61,7 +26,7 @@ class CfLogin extends Component{
                         <Form.Item>
                             <Checkbox>记住我</Checkbox>
                             <a className="login-form-forgot" href="">忘记密码！</a>
-                            <Button loading={this.state.loading} type="primary" htmlType="submit" className="login-form-button">
+                            <Button loading={loading} type="primary" htmlType="submit" className="login-form-button">
                                 登录
                             </Button>
                         </Form.Item>
@@ -75,18 +40,21 @@ class CfLogin extends Component{
 const mapStateToProps = (state) => {
     return {
         userName: state.get('cfLoginReducer').get('userName'),
-        userPassWord: state.get('cfLoginReducer').get('userPassWord')
+        userPassWord: state.get('cfLoginReducer').get('userPassWord'),
+        loading: state.get('cfLoginReducer').get('loading')
     }
 };
 const mapDispatchToProps = (dispatch) => {
     return {
         handleNameChange (e) {
-            const action = actionCreators.getUserNameChange(e.target.value);
-            dispatch(action);
+            dispatch(actionCreators.getUserNameChange(e.target.value));
         },
         handlePassWordChange (e) {
-            const action = actionCreators.getUserPassWordChange(e.target.value);
-            dispatch(action);
+            dispatch(actionCreators.getUserPassWordChange(e.target.value));
+        },
+        handleSubmit (e, userName, userPassWord) {
+            e.preventDefault();
+            dispatch(actionCreators.getLoginSubmit(userName, userPassWord))
         }
     }
 };

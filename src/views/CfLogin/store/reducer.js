@@ -5,7 +5,8 @@ import { fromJS} from 'immutable';  // 引入immutable库
 * 转成immutable对象 不可改变的对象*/
 const defaultState = fromJS({
     userName: '',
-    userPassWord: ''
+    userPassWord: '',
+    loading: false
 });
 export default (state = defaultState, action) => {
     // const newState = JSON.parse(JSON.stringify(state));
@@ -15,6 +16,8 @@ export default (state = defaultState, action) => {
             return state.set('userName', action.value);
         case actionTypes.USER_PASSWORD_CHANGE:
             return state.set('userPassWord', action.value);
+        case actionTypes.LOGIN_LOADING:
+            return state.set('loading', action.value);
         default:
             return state;
     }

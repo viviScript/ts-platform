@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29291b16-ff6b-4c39-a838-9a2b695d1131" name="Default Changelist" comment="优化目录结构 增加immutable redux-immutable">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/CfLogin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/CfLogin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/CfLogin/store/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/CfLogin/store/actionCreators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/CfLogin/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/CfLogin/store/actionTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/CfLogin/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/CfLogin/store/reducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,21 +20,9 @@
     <favorites_list name="ts-platform" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.43053436">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/views/CfLogin/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1705">
-                  <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#41#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/store/actionCreators.js">
               <provider selected="true" editor-type-id="text-editor" />
@@ -52,8 +40,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/views/CfLogin/store/reducer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+                <state relative-caret-position="378">
+                  <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
                   </folding>
@@ -64,8 +52,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="2" selection-end-line="2" />
+                <state relative-caret-position="21">
+                  <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/views/CfLogin/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="448">
+                  <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -79,11 +79,14 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/views/CfLogin/store/actionCreators.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="63">
-                  <caret line="3" column="9" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="9" />
+                <state relative-caret-position="217">
+                  <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#0#45#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -91,8 +94,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/views/CfLogin/store/actionTypes.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="13" selection-start-column="13" selection-end-column="13" />
+                <state relative-caret-position="63">
+                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
                 </state>
               </provider>
             </entry>
@@ -101,20 +104,23 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/views/CfLogin/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1281">
-                  <caret line="76" column="45" selection-start-line="76" selection-start-column="45" selection-end-line="76" selection-end-column="45" />
+                <state relative-caret-position="189">
+                  <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/store/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+                <state relative-caret-position="63">
+                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
                   <folding>
                     <element signature="e#0#62#0" expanded="true" />
                   </folding>
@@ -143,6 +149,8 @@
       <find>apiURL</find>
       <find>rules</find>
       <find>f</find>
+      <find>handleSubmit</find>
+      <find>loading</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,13 +202,13 @@
         <option value="$PROJECT_DIR$/src/config/common.const.js" />
         <option value="$PROJECT_DIR$/src/util/index.js" />
         <option value="$PROJECT_DIR$/src/views/CfLogin/style/index.scss" />
-        <option value="$PROJECT_DIR$/src/views/CfLogin/store/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/store/actionCreators.js" />
-        <option value="$PROJECT_DIR$/src/views/CfLogin/store/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/views/CfLogin/store/index.js" />
-        <option value="$PROJECT_DIR$/src/views/CfLogin/store/reducer.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/index.js" />
+        <option value="$PROJECT_DIR$/src/views/CfLogin/store/reducer.js" />
+        <option value="$PROJECT_DIR$/src/views/CfLogin/store/actionTypes.js" />
+        <option value="$PROJECT_DIR$/src/views/CfLogin/store/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/views/CfLogin/index.js" />
       </list>
     </option>
@@ -221,7 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,6 +245,12 @@
               <item name="ts-platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="ts-platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ts-platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ts-platform" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ts-platform" type="b2602c69:ProjectViewProjectNode" />
@@ -264,6 +277,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,6 +369,7 @@
       <workItem from="1555121852083" duration="2800000" />
       <workItem from="1555138671176" duration="688000" />
       <workItem from="1555142715456" duration="505000" />
+      <workItem from="1555147437673" duration="4227000" />
     </task>
     <task id="LOCAL-00001" summary="reducer注释">
       <created>1554902745783</created>
@@ -367,7 +382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49502000" />
+    <option name="totallyTimeSpent" value="53729000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,10 +395,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.5020747" side_tool="true" weight="0.12296564" />
       <window_info id="npm" order="1" sideWeight="0.5008881" side_tool="true" weight="0.24908425" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4979253" visible="true" weight="0.2103677" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4979253" visible="true" weight="0.2103677" />
       <window_info id="Structure" order="3" sideWeight="0.5008881" side_tool="true" weight="0.2019802" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="1" sideWeight="0.4990099" weight="0.28630707" />
@@ -393,7 +409,7 @@
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32883817" />
       <window_info anchor="bottom" id="TypeScript" order="7" weight="0.32896304" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.25518674" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.25518674" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -737,26 +753,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/reducer_login.js" />
-    <entry file="file://$PROJECT_DIR$/src/store/actionCreators.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -771,13 +767,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/CfLogin/store/reducer.js">
+    <entry file="file://$PROJECT_DIR$/src/store/actionCreators.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        <state relative-caret-position="21">
+          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#62#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/CfLogin/store/actionTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -788,31 +801,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/CfLogin/store/actionTypes.js">
+    <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="21">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/CfLogin/store/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/CfLogin/store/actionCreators.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+        <state relative-caret-position="217">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/CfLogin/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1705">
-          <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+        <state relative-caret-position="189">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
