@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
 import './style/index.scss'
 import {
-    Form, Icon, Input, Button, Checkbox, Card
+    Form, Icon, Input, Button, Checkbox, Card, message
 } from 'antd';
 import { connect } from 'react-redux';
 import {
     getUserNameChange,
     getUserPassWordChange
 } from '../../store/actionCreators';
-import axios from 'axios';
+import {
+    getLogin
+} from '../../api/api';
+import {
+    USER_TOKEN
+} from '../../config/common.const';
+import {
+    setSession
+} from '../../util/index';
 class CfLogin extends Component{
     constructor(props) {
         super(props);
@@ -24,11 +32,15 @@ class CfLogin extends Component{
         this.setState({
             loading: true
         });
-        axios.post('http://192.168.0.70:8084/system/frame/login/sso', {
+        getLogin({
             username: this.props.userName,
             password: this.props.userPassWord
         }).then(res => {
             console.log(res, '登录');
+            if (res.data.code === '200') {
+                setSession(USER_TOKEN, res.data.data);
+                message.success('恭喜您，登录成功！');
+            }
             this.setState({
                 loading: false
             });
