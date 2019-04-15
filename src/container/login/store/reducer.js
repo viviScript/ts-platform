@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import { fromJS} from 'immutable';  // 引入immutable库
+import { fromJS } from 'immutable';  // 引入immutable库
 /*
 * 将state利用immutable提供对fromJS方法
 * 转成immutable对象 不可改变的对象*/

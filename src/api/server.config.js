@@ -8,4 +8,5 @@
 const HISTORY= 'http://192.168.0.70:8084/';
 export default {
     login: HISTORY + 'system/frame/login/sso', // 登录
+    getRes: HISTORY + 'system/frame/auth/getRes'  // 菜单
 };

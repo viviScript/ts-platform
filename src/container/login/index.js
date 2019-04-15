@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './style/index.scss'
 import {
-    Form, Icon, Input, Button, Checkbox, Card
+    Form, Icon, Input, Button, Card
 } from 'antd';
 import { connect } from 'react-redux';
 import { actionCreators } from './store'
+import { withRouter } from 'react-router-dom';
 
-
-class CfLogin extends Component{
+class Login extends Component{
     render() {
         const { userName, userPassWord, handleNameChange, handlePassWordChange, loading, handleSubmit } = this.props;
         return (
@@ -16,7 +16,7 @@ class CfLogin extends Component{
                     title="用户登录"
                     style={{ width: 300 }}
                 >
-                    <Form onSubmit={(e) => {handleSubmit(e, userName, userPassWord)}} className="login-form">
+                    <Form onSubmit={(e) => {handleSubmit(e, this.props)}} className="login-form">
                         <Form.Item>
                             <Input onChange={handleNameChange} value={userName} prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Username" />
                         </Form.Item>
@@ -24,8 +24,6 @@ class CfLogin extends Component{
                             <Input onChange={handlePassWordChange} value={userPassWord} prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
                         </Form.Item>
                         <Form.Item>
-                            <Checkbox>记住我</Checkbox>
-                            <a className="login-form-forgot" href="">忘记密码！</a>
                             <Button loading={loading} type="primary" htmlType="submit" className="login-form-button">
                                 登录
                             </Button>
@@ -39,9 +37,9 @@ class CfLogin extends Component{
 }
 const mapStateToProps = (state) => {
     return {
-        userName: state.get('cfLoginReducer').get('userName'),
-        userPassWord: state.get('cfLoginReducer').get('userPassWord'),
-        loading: state.get('cfLoginReducer').get('loading')
+        userName: state.get('loginReducer').get('userName'),
+        userPassWord: state.get('loginReducer').get('userPassWord'),
+        loading: state.get('loginReducer').get('loading')
     }
 };
 const mapDispatchToProps = (dispatch) => {
@@ -52,10 +50,10 @@ const mapDispatchToProps = (dispatch) => {
         handlePassWordChange (e) {
             dispatch(actionCreators.getUserPassWordChange(e.target.value));
         },
-        handleSubmit (e, userName, userPassWord) {
+        handleSubmit (e, props) {
             e.preventDefault();
-            dispatch(actionCreators.getLoginSubmit(userName, userPassWord))
+            dispatch(actionCreators.getLoginSubmit(props))
         }
     }
 };
-export default connect(mapStateToProps, mapDispatchToProps)(CfLogin);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));

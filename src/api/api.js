@@ -37,3 +37,11 @@ export const getLogin = (data) => {
         data: data
     })
 };
+export const getMenuRes = () => {
+    return server({
+        url: URL.getRes + `?appCode=platform`,
+        method: 'get',
+        dataType: "json",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+    })
+};

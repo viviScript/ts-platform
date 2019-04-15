@@ -19,17 +19,18 @@ export const getLoading = (value) => ({
     type: actionTypes.LOGIN_LOADING,
     value: fromJS(value)
 });
-export const getLoginSubmit = (userName, userPassWord) => {
+export const getLoginSubmit = (props) => {
     return (dispatch) => {
         dispatch(getLoading(true));   // 开启loading
         getLogin({
-            username: userName,
-            password: userPassWord
+            username: props.userName,
+            password: props.userPassWord
         }).then(res => {
             console.log(res, '登录');
             if (res.data.code === '200') {
                 setSession(USER_TOKEN, res.data.data);
                 message.success('恭喜您，登录成功！');
+                props.history.push('/home')
             } else {
                 removeSession(USER_TOKEN);
                 message.error('登录失败，请重试！');
