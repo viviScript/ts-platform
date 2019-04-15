@@ -26,6 +26,9 @@ export const getLogin = (data) => {
         method: 'post',
         dataType: "json",
         contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        headers: {
+            "Authorization": ''
+        },
         transformRequest: [function (data) {
             // Do whatever you want to transform the data
             let ret = '';
@@ -37,7 +40,7 @@ export const getLogin = (data) => {
         data: data
     })
 };
-export const getMenuRes = () => {
+export const api_getMenuList = () => {
     return server({
         url: URL.getRes + `?appCode=platform`,
         method: 'get',

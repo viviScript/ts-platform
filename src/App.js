@@ -16,8 +16,12 @@ import { Provider } from 'react-redux'  // 使用react-redux 引入Provider组�
 // import store from './TodoList_react_redux/store'
 // import Routes from './routes'
 import store from './store/index'
-import Home from './container/home'
-import Login from './container/login'
+// import Home from './container/home'
+// import Login from './container/login'
+import {
+    Home,
+    Login
+} from './container'
 class App extends Component {
     render() {
         return (

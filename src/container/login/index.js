@@ -6,12 +6,13 @@ import {
 import { connect } from 'react-redux';
 import { actionCreators } from './store'
 import { withRouter } from 'react-router-dom';
+import { LoginWrapper } from './style/style';
 
 class Login extends Component{
     render() {
         const { userName, userPassWord, handleNameChange, handlePassWordChange, loading, handleSubmit } = this.props;
         return (
-            <div className='login'>
+            <LoginWrapper>
                 <Card
                     title="用户登录"
                     style={{ width: 300 }}
@@ -30,8 +31,7 @@ class Login extends Component{
                         </Form.Item>
                     </Form>
                 </Card>
-
-            </div>
+            </LoginWrapper>
         )
     }
 }
@@ -45,14 +45,14 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleNameChange (e) {
-            dispatch(actionCreators.getUserNameChange(e.target.value));
+            dispatch(actionCreators.ac_getUserNameChange(e.target.value));
         },
         handlePassWordChange (e) {
-            dispatch(actionCreators.getUserPassWordChange(e.target.value));
+            dispatch(actionCreators.ac_getUserPassWordChange(e.target.value));
         },
         handleSubmit (e, props) {
             e.preventDefault();
-            dispatch(actionCreators.getLoginSubmit(props))
+            dispatch(actionCreators.ac_getLoginSubmit(props))
         }
     }
 };

@@ -6,22 +6,23 @@ import {message} from "antd";
 import {
     getLogin
 } from '../../../api/api';
-export const getUserNameChange = (value) => ({
+export const ac_getUserNameChange = (value) => ({
     type: actionTypes.USER_NAME_CHANGE,
     value: fromJS(value)
 });
 
-export const getUserPassWordChange = (value) => ({
+export const ac_getUserPassWordChange = (value) => ({
     type: actionTypes.USER_PASSWORD_CHANGE,
     value: fromJS(value)
 });
-export const getLoading = (value) => ({
+export const ac_getLoading = (value) => ({
     type: actionTypes.LOGIN_LOADING,
     value: fromJS(value)
 });
-export const getLoginSubmit = (props) => {
+export const ac_getLoginSubmit = (props) => {
     return (dispatch) => {
-        dispatch(getLoading(true));   // 开启loading
+        dispatch(ac_getLoading(true));   // 开启loading
+        props.history.push('/home');
         getLogin({
             username: props.userName,
             password: props.userPassWord
@@ -35,7 +36,10 @@ export const getLoginSubmit = (props) => {
                 removeSession(USER_TOKEN);
                 message.error('登录失败，请重试！');
             }
-            dispatch(getLoading(false));   // 关闭loading
+            dispatch(ac_getLoading(false));   // 关闭loading
+        }).catch(err => {
+            removeSession(USER_TOKEN);
+            message.error('登录失败，请重试！');
         })
     }
 };
