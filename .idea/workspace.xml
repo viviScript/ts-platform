@@ -2,56 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29291b16-ff6b-4c39-a838-9a2b695d1131" name="Default Changelist" comment="增加home组件异步加载 &#10;增加LogoUI组件&#10;增加左侧菜单收缩展开">
-      <change afterPath="$PROJECT_DIR$/images.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.prod.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.test.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_01/TodoItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_01/TodoList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_demo/store/actionCreators.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_demo/store/actionTypes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_demo/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_demo/store/reducers/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_demo/store/reducers/reducer_one.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_demo/store/reducers/reducer_two.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_demo/views/TodoList/TodoList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_react_redux/store/actionCreators.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_react_redux/store/actionTypes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_react_redux/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_react_redux/store/reducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_react_redux/views/TodoList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_thunk_saga/mock/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_thunk_saga/store/actionCreators.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_thunk_saga/store/actionTypes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_thunk_saga/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_thunk_saga/store/reducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_thunk_saga/store/sagas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_thunk_saga/views/TodoList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoList_thunk_saga/views/TodoListUi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/home/loadable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/home/loadable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/home/store/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/home/store/actionCreators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/home/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/home/store/actionTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/home/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/home/store/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/home/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/home/store/reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/login/store/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/login/store/actionCreators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/login/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/login/store/actionTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/login/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/login/store/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/login/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/login/store/reducer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionCreators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -67,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="357">
+              <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -79,9 +31,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tslint.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -138,7 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/http/index.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/reducer_login.js" />
         <option value="$PROJECT_DIR$/src/api.js" />
         <option value="$PROJECT_DIR$/src/api/serverApi.js" />
@@ -189,6 +144,7 @@
         <option value="$PROJECT_DIR$/src/container/home/store/reducer.tsx" />
         <option value="$PROJECT_DIR$/src/index.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
+        <option value="$PROJECT_DIR$/tslint.json" />
       </list>
     </option>
   </component>
@@ -260,7 +216,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -341,6 +297,7 @@
       <workItem from="1555225129804" duration="9333000" />
       <workItem from="1555299760062" duration="8493000" />
       <workItem from="1555394094403" duration="3579000" />
+      <workItem from="1555404879146" duration="350000" />
     </task>
     <task id="LOCAL-00001" summary="reducer注释">
       <created>1554902745783</created>
@@ -353,7 +310,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78837000" />
+    <option name="totallyTimeSpent" value="79187000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,8 +323,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" sideWeight="0.23029046" side_tool="true" visible="true" weight="0.2103677" />
+      <window_info id="Favorites" order="0" sideWeight="0.23029046" side_tool="true" weight="0.2103677" />
       <window_info id="npm" order="1" sideWeight="0.5008881" side_tool="true" weight="0.24908425" />
       <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.7697095" visible="true" weight="0.2103677" />
       <window_info id="Structure" order="3" sideWeight="0.50340134" side_tool="true" weight="0.2103677" />
@@ -560,112 +518,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_01/TodoItem.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_01/TodoList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/actionCreators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/actionTypes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/reducer_one.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/reducer_two.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/store/actionTypes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/store/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/store/actionCreators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/views/TodoList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1278" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="29" selection-start-line="29" selection-end-line="40" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-            <element signature="e#816#862#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/actionCreators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/actionTypes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TodoList_01/TodoItem.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_01/TodoList.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/actionCreators.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/actionTypes.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/reducer_one.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/reducer_two.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/store/actionTypes.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/store/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/store/reducer.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/store/actionCreators.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_react_redux/views/TodoList.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/actionCreators.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/actionTypes.js" />
     <entry file="file://$PROJECT_DIR$/src/container/login/store/actionCreators.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -676,26 +544,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" selection-start-line="17" selection-end-line="22" selection-end-column="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#94#211#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/sagas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/reducer.js" />
+    <entry file="file://$PROJECT_DIR$/src/TodoList_thunk_saga/store/sagas.js" />
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -787,18 +637,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tslint.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="357">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tslint.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

@@ -1,16 +1,13 @@
 
-interface SessionFace {
-    key: string,
-    value?: any
-}
 
-export const setSession = ({key, value}:SessionFace):void => {
+
+export const setSession = (key:string, value:string):void => {
     sessionStorage.setItem(key, value);
 };
-export const getSession = ({key}:SessionFace):any => {
+export const getSession = (key:string):any => {
     return sessionStorage.getItem(key);
 };
 
-export const removeSession = ({key}: SessionFace):void => {
+export const removeSession = (key:string):void => {
     sessionStorage.removeItem(key);
 };

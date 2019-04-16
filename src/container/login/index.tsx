@@ -8,7 +8,15 @@ import { actionCreators } from './store'
 import { withRouter } from 'react-router-dom';
 import { LoginWrapper } from './style/style';
 
-class Login extends Component{
+interface LoginProps {
+    userName: string,
+    userPassWord: string,
+    loading: boolean,
+    handleNameChange():void,
+    handlePassWordChange():void,
+    handleSubmit(e:any, props:any):void
+}
+class Login extends Component<LoginProps>{
     render() {
         const { userName, userPassWord, handleNameChange, handlePassWordChange, loading, handleSubmit } = this.props;
         return (
@@ -35,22 +43,22 @@ class Login extends Component{
         )
     }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = (state:any) => {
     return {
         userName: state.get('loginReducer').get('userName'),
         userPassWord: state.get('loginReducer').get('userPassWord'),
         loading: state.get('loginReducer').get('loading')
     }
 };
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch:any):object => {
     return {
-        handleNameChange (e) {
+        handleNameChange (e:any):void {
             dispatch(actionCreators.ac_getUserNameChange(e.target.value));
         },
-        handlePassWordChange (e) {
+        handlePassWordChange (e:any):void {
             dispatch(actionCreators.ac_getUserPassWordChange(e.target.value));
         },
-        handleSubmit (e, props) {
+        handleSubmit (e:any, props:any):void {
             e.preventDefault();
             dispatch(actionCreators.ac_getLoginSubmit(props))
         }

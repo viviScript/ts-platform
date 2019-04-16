@@ -8,6 +8,6 @@
     ]
   },
   "rules": {
-    　　"ordered-imports": false
+   　　"ordered-imports": false
     }
 }

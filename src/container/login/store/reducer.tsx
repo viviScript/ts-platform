@@ -22,7 +22,7 @@ const defaultState = fromJS({
 * reducer 可以接受state,但是绝不能修改state
 * 纯函数指到是，给定固定到输入，就一定会有固定到输出，而且不会有任何到副作用
 * */
-export default (state = defaultState, action) => {
+export default (state = defaultState, action:any) => {
     // const newState = JSON.parse(JSON.stringify(state));
     switch (action.type) {
         case actionTypes.USER_NAME_CHANGE:
