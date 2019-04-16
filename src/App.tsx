@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
 import { BrowserRouter, Route } from 'react-router-dom';
 // import TodoList from './TodoList_demo/container/TodoList/TodoList';
 // import TodoList from './TodoList_thunk_saga/container/TodoList';
@@ -16,22 +15,17 @@ import { Provider } from 'react-redux'  // 使用react-redux 引入Provider组�
 // import store from './TodoList_react_redux/store'
 // import Routes from './routes'
 import store from './store/index'
-// import Home from './container/home'
-// import Login from './container/login'
-import {
-    Home,
-    Login
-} from './container'
-class App extends Component {
+import { Login, Home } from './container'
+import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
+
+class App extends Component<{}> {
     render() {
         return (
             <Provider store={store}>
                 <BrowserRouter>
                     <div className="App">
-                        <Route path='/' exact component={Login}>
-                        </Route>
-                        <Route path='/home' exact component={Home}>
-                        </Route>
+                        <Route path='/' exact={true} component={Login} />
+                        <Route path='/home' exact={true} component={Home} />
                     </div>
                 </BrowserRouter>
             </Provider>

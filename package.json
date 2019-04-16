@@ -19,7 +19,8 @@
     "redux-saga": "^1.0.2",
     "redux-thunk": "^2.3.0",
     "sass": "^1.18.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "react-scripts-ts": "3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,7 +39,12 @@
   ],
   "devDependencies": {
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.4",
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.8.4",
+    "typescript": "^3.4.3"
   },
   "proxy": "http://192.168.0.70:8084"
 }
