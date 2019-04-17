@@ -5,7 +5,7 @@ import {
 } from 'antd';
 import { connect } from 'react-redux';
 import { actionCreators } from './store'
-import { withRouter } from 'react-router-dom';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { LoginWrapper } from './style/style';
 
 interface LoginProps {
@@ -16,8 +16,9 @@ interface LoginProps {
     handlePassWordChange():void,
     handleSubmit(e:any, props:any):void
 }
-class Login extends Component<LoginProps>{
+class Login extends Component<RouteComponentProps & LoginProps>{
     render() {
+        console.log(this.props)
         const { userName, userPassWord, handleNameChange, handlePassWordChange, loading, handleSubmit } = this.props;
         return (
             <LoginWrapper>
@@ -64,4 +65,5 @@ const mapDispatchToProps = (dispatch:any):object => {
         }
     }
 };
+// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Login));
