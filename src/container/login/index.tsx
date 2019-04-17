@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { actionCreators } from './store'
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { LoginWrapper } from './style/style';
-
+import { ImmuTableProps } from '../../types';
 interface LoginProps {
     userName: string,
     userPassWord: string,
@@ -44,7 +44,7 @@ class Login extends Component<RouteComponentProps & LoginProps>{
         )
     }
 }
-const mapStateToProps = (state:any) => {
+const mapStateToProps = (state:ImmuTableProps) => {
     return {
         userName: state.get('loginReducer').get('userName'),
         userPassWord: state.get('loginReducer').get('userPassWord'),
