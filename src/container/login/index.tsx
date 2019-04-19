@@ -18,7 +18,6 @@ interface LoginProps {
 }
 class Login extends Component<RouteComponentProps & LoginProps>{
     render() {
-        console.log(this.props)
         const { userName, userPassWord, handleNameChange, handlePassWordChange, loading, handleSubmit } = this.props;
         return (
             <LoginWrapper>

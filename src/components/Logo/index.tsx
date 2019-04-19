@@ -2,7 +2,12 @@ import React from 'react';
 import {
     LogoWrapper
 } from './style';
-const Logo = (props) => {
+type Props = {
+    name?: string,
+    icon: any,
+    collapsed: boolean
+}
+const Logo = (props: Props) => {
     if(props.collapsed) {
         return (
             <LogoWrapper>
