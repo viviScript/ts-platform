@@ -10,12 +10,12 @@ import HomeMenu from '../../components/HomeMenu';
 import screenfull from "screenfull";
 import Login from '../login'
 const { Content, Sider } = Layout;
-interface HomeProps {
-  list: any[];
-  getResList(): void;
+type HomeProps = {
+  list: any[],
+  getResList: () => void,
   match: any
 }
-interface HomeStateProps {
+type HomeStateProps = {
   collapsed: boolean;
   marginLeft: number;
 }
