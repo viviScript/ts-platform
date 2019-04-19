@@ -8,7 +8,7 @@ import { actionCreators } from './store'
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { LoginWrapper } from './style/style';
 import { ImmuTableProps } from '../../types';
-interface LoginProps {
+type LoginProps =  {
     userName: string,
     userPassWord: string,
     loading: boolean,
