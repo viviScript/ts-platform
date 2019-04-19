@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emotion/memoize": "^0.7.1",
+    "@types/react-loadable": "^5.5.1",
     "antd": "^3.16.2",
     "axios": "^0.18.0",
     "immutable": "^4.0.0-rc.12",
