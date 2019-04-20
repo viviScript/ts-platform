@@ -1,0 +1,3 @@
+interface Allkeys {
+    key: string
+}
