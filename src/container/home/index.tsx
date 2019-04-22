@@ -2,23 +2,28 @@ import React, { PureComponent } from "react";
 import { Layout, Icon } from "antd";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
-import { ImmuTableProps } from '../../types';
-import { withRouter, RouteComponentProps, Route, Link } from "react-router-dom";
-import Logo from "../../components/Logo/index";
-import HomeHeader from "../../components/HomeHeader";
-import HomeMenu from '../../components/HomeMenu';
+import { ImmuTableProps } from "../../types";
+import {
+  withRouter,
+  RouteComponentProps,
+  Route,
+  Link,
+  Switch
+} from "react-router-dom";
+import {Logo, HomeHeader, HomeMenu, HomeBread} from '../../components'
 import screenfull from "screenfull";
-import Login from '../login'
+import { Wjgl, NoMatch } from "../index";
+import {HomeBreadWrapper} from './style/style'
 const { Content, Sider } = Layout;
 type HomeProps = {
-  list: any[],
-  getResList: () => void,
-  match: any
-}
+  list: any[];
+  getResList: () => void;
+  match: any;
+};
 type HomeStateProps = {
   collapsed: boolean;
   marginLeft: number;
-}
+};
 class Home extends PureComponent<
   HomeProps & RouteComponentProps,
   HomeStateProps
@@ -30,6 +35,7 @@ class Home extends PureComponent<
       marginLeft: 200
     };
     this.toggleCollapsed = this.toggleCollapsed.bind(this);
+    this.menuToUrlHandle = this.menuToUrlHandle.bind(this);
   }
   screenFull = () => {
     if (screenfull.enabled) {
@@ -52,9 +58,12 @@ class Home extends PureComponent<
       });
     }
   };
+  menuToUrlHandle = (item_child: any) => {
+    console.log(item_child.get("path"), "item_child");
+  };
   public render() {
-    const { list } = this.props;
-    console.log(this.props)
+    const { list, match } = this.props;
+    console.log(this.props);
     return (
       <Layout>
         <Sider
@@ -73,18 +82,29 @@ class Home extends PureComponent<
             icon={<Icon type="deployment-unit" />}
             collapsed={this.state.collapsed}
           />
-          <HomeMenu list={list} collapsed={this.state.collapsed}/>
+          <HomeMenu
+            list={list}
+            collapsed={this.state.collapsed}
+            menuToUrlHandle={this.menuToUrlHandle}
+          />
         </Sider>
         <Layout
           style={{ marginLeft: this.state.marginLeft, position: "relative" }}
         >
           <HomeHeader screenFull={this.screenFull} />
-          <Content style={{ margin: "80px 16px 0", overflow: "initial" }}>
+          
+          <HomeBreadWrapper>
+            <HomeBread />
+          </HomeBreadWrapper>
+
+          <Content style={{ margin: "100px 16px 0", overflow: "initial" }}>
             <div
               style={{ padding: 24, background: "#fff", textAlign: "center" }}
             >
-              <Link to='/home/Login'>子集页面</Link>
-              <Route path='/home/Login' exact={true} component={Login} />
+              <Switch>
+                <Route path="/home/wjgl" component={Wjgl} />
+                <Route component={NoMatch} />
+              </Switch>
             </div>
           </Content>
         </Layout>
