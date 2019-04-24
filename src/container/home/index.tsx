@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Layout, Icon } from "antd";
+import { Layout, Icon, Breadcrumb } from "antd";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
 import { ImmuTableProps } from "../../types";
@@ -19,6 +19,7 @@ type HomeProps = {
   list: any[];
   getResList: () => void;
   match: any;
+  breadcrumbNameMap: any
 };
 type HomeStateProps = {
   collapsed: boolean;
@@ -60,10 +61,11 @@ class Home extends PureComponent<
   };
   menuToUrlHandle = (item_child: any) => {
     console.log(item_child.get("path"), "item_child");
+    this.props.history.push(item_child.get("path"))
   };
+  
   public render() {
-    const { list, match } = this.props;
-    console.log(this.props);
+    const { list, breadcrumbNameMap } = this.props;
     return (
       <Layout>
         <Sider
@@ -94,7 +96,7 @@ class Home extends PureComponent<
           <HomeHeader screenFull={this.screenFull} />
           
           <HomeBreadWrapper>
-            <HomeBread />
+            <HomeBread breadcrumbNameMap={breadcrumbNameMap}/>
           </HomeBreadWrapper>
 
           <Content style={{ margin: "100px 16px 0", overflow: "initial" }}>
@@ -103,7 +105,7 @@ class Home extends PureComponent<
             >
               <Switch>
                 <Route path="/home/wjgl" component={Wjgl} />
-                <Route component={NoMatch} />
+                <Route path="/home/wjgl" component={Wjgl} />
               </Switch>
             </div>
           </Content>
@@ -119,7 +121,8 @@ class Home extends PureComponent<
 
 const mapStateToProps = (state: ImmuTableProps): object => {
   return {
-    list: state.get("homeReducer").get("list")
+    list: state.get("homeReducer").get("list"),
+    breadcrumbNameMap: state.get('homeReducer').get('breadcrumbNameMap')
   };
 };
 const mapDispatchToProps = (dispatch: any): object => {
