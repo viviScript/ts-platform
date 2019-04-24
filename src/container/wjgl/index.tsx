@@ -1,9 +1,20 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+function aaa () {
+    return (
+        <div>
+            子集目录
+        </div>
+    )
+}
 
 class Wjgl extends React.Component{
     render () {
         return (
-            <div>11111111111</div>
+            <div>
+                1111
+                <Route path="/" component={aaa} />
+            </div>
         )
     }
 }

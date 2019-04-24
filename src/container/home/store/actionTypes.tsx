@@ -1,1 +1,4 @@
-export const HOME_MENU_LIST = 'home_menu_list';
+export const HOME_MENU_LIST = 'HOME_MENU_LIST';
+type HOME_MENU_LIST = typeof HOME_MENU_LIST
+export const BREACRUM_NAME_MAP = 'BREACRUM_NAME_MAP';
+type BREACRUM_NAME_MAP = typeof BREACRUM_NAME_MAP

@@ -1,7 +1,6 @@
 
 import server from './server';
-import URL from './server.config.js';
-
+import URL from './server.config';
 // 登录方法
 // export function getLogin(data){
 //     return server({
@@ -41,10 +40,11 @@ export const getLogin = (data) => {
     })
 };
 export const api_getMenuList = () => {
-    return server({
-        url: URL.getRes + `?appCode=platform`,
-        method: 'get',
-        dataType: "json",
-        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
-    })
+    // return server({
+    //     url: URL.getRes + `?appCode=platform`,
+    //     method: 'get',
+    //     dataType: "json",
+    //     contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+    // })
+    return server.get(URL.getRes + `?appCode=platform`,)
 };
