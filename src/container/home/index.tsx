@@ -12,7 +12,7 @@ import {
 } from "react-router-dom";
 import {Logo, HomeHeader, HomeMenu, HomeBread} from '../../components'
 import screenfull from "screenfull";
-import { Wjgl, NoMatch } from "../index";
+import { Wjgl, Yygl } from "../index";
 import {HomeBreadWrapper} from './style/style'
 const { Content, Sider } = Layout;
 type HomeProps = {
@@ -105,7 +105,7 @@ class Home extends PureComponent<
             >
               <Switch>
                 <Route path="/home/wjgl" component={Wjgl} />
-                <Route path="/home/wjgl" component={Wjgl} />
+                <Route path="/home/yygl" component={Yygl} />
               </Switch>
             </div>
           </Content>
