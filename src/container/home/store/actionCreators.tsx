@@ -4,27 +4,7 @@ import {
     api_getMenuList
 } from '../../../api/api';
 
-export const ac_setMenuList = (value:any[]) => ({
-    type: actionTypes.HOME_MENU_LIST,
-    value: fromJS(value)
-});
-export const ac_setBreadCrumb = (value:object) => ({
-    type: actionTypes.BREACRUM_NAME_MAP,
-    value: fromJS(value)
-})
-export const ac_getMenuList = () => {
-    return (dispatch:any) => {
-        api_getMenuList().then((res:any):void => {
-            console.log(res, '获取菜单列表');
-            if (res.data.code === '200') {
-                dispatch(ac_setMenuList(menuListForm(res.data.data)));
-                dispatch(ac_setBreadCrumb(routeMapForm(res.data.data)))
-            }
-        });
-
-    }
-};
- const menuListForm = (ary: any[]) => {
+const menuListForm = (ary: any[]) => {
     for(let i = 0; i < ary.length; i++) {
         if (ary[i]['path']) {
             ary[i]['path'] = ary[i]['path'].replace('/index.html', '').replace('views/platform', '/home')
@@ -45,3 +25,26 @@ const routeMapForm = (ary: any[]): any => {
     }
     return nameMap
   }
+
+
+export const ac_setMenuList = (value:any[]) => ({
+    type: actionTypes.HOME_MENU_LIST,
+    value: fromJS(value)
+});
+export const ac_setBreadCrumb = (value:object) => ({
+    type: actionTypes.BREACRUM_NAME_MAP,
+    value: fromJS(value)
+})
+export const ac_getMenuList = () => {
+    return (dispatch:any) => {
+        api_getMenuList().then((res:any):void => {
+            console.log(res, '获取菜单列表');
+            if (res.data.code === '200') {
+                dispatch(ac_setMenuList(menuListForm(res.data.data)));
+                dispatch(ac_setBreadCrumb(routeMapForm(res.data.data)))
+            }
+        });
+
+    }
+};
+ 

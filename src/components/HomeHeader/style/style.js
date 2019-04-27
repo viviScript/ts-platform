@@ -3,9 +3,10 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.div`
     background: #fff;
     padding: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
+    z-index: 200;
     .ant-layout-header {
         display: flex;
         justify-content: flex-end;
