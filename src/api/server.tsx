@@ -9,7 +9,7 @@ axios.defaults.headers['Authorization'] = (function () {
     return 'bearer ' + getSession(USER_TOKEN)
 })();
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-axios.defaults.timeout = 3000;
+axios.defaults.timeout = 10000;
 //开始请求设置，发起拦截处理
 axios.interceptors.request.use(config => {
     console.log(config, '开始请求设置，发起拦截处理')
