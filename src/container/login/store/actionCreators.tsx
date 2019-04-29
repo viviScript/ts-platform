@@ -22,7 +22,6 @@ export const ac_getLoading = (value:boolean) => ({
 export const ac_getLoginSubmit = (props:any) => {
     return (dispatch:any) => {
         dispatch(ac_getLoading(true));   // 开启loading
-        props.history.push('/home');
         getLogin({
             username: props.userName,
             password: props.userPassWord
@@ -41,6 +40,7 @@ export const ac_getLoginSubmit = (props:any) => {
             console.log(err, '登录异常')
             removeSession(USER_TOKEN);
             message.error('登录失败，请重试！');
+            dispatch(ac_getLoading(false));   // 关闭loading
         })
     }
 };

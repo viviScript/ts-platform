@@ -12,46 +12,42 @@ import {
   Divider,
   Modal
 } from "antd";
-import { FormWrapper, CardTitleWrapper } from "./style";
+import { FormWrapper } from "./style";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
+import CardTitle from '../../components/CardTitle'
 const { Option } = Select;
-type CardTitleProps = {
-  name?: string;
-  titleCard?: any;
-};
-function CardTitle(props: CardTitleProps) {
-  return (
-    <CardTitleWrapper>
-      {props.titleCard || ""}
-      <span className="title">{props.name || ""}</span>
-      <Button size="small">刷新</Button>
-    </CardTitleWrapper>
-  );
-}
+
+
 interface IUser {
   key: string;
   name: string;
   title: string;
 }
-
-class Yygl extends React.PureComponent<RouteComponentProps> {
+type YyglProps = {
+  form: any,
+  getYyglSearch: (value: any) => void,
+  list: any,
+  tableLoading: boolean
+}
+class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
   constructor(props: any) {
     super(props);
     this.state = {
       visible: false
     };
+    this.getYyglList = this.getYyglList.bind(this);
   }
-  handleSearch = (e: any) => {
+  handleSearch = (e: any):void => {
     e.preventDefault();
     this.getYyglList();
   };
-  handleReset = () => {
+  handleReset = ():void => {
     this.props.form.resetFields();
     this.getYyglList();
   };
-  getYyglList() {
+  getYyglList():void {
     this.props.form.validateFields((err: any, values: any) => {
       console.log("form表单数据: ", values);
       values.pageNum = 1;
@@ -205,6 +201,8 @@ class Yygl extends React.PureComponent<RouteComponentProps> {
             <CardTitle
               titleCard={<Icon type="appstore" theme="twoTone" />}
               name={"应用列表"}
+              loading={tableLoading}
+              handleBtn={ () => {this.getYyglList()}}
             />
           }
           extra={
@@ -222,14 +220,15 @@ class Yygl extends React.PureComponent<RouteComponentProps> {
           />
         </Card>
         <Modal
-          title="Basic Modal"
+          title="查看详情"
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <Row>
+            <Col span={12}>应用名称：</Col>
+            <Col span={12}>应用类型：</Col>
+          </Row>
         </Modal>
       </div>
     );
