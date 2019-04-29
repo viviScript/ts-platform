@@ -10,15 +10,16 @@ import {
   Icon,
   Table,
   Divider,
-  Modal
+  Drawer
 } from "antd";
-import { FormWrapper } from "./style";
+// import { FormWrapper } from "./style";
 import { withRouter, RouteComponentProps } from "react-router-dom";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
-import CardTitle from '../../components/CardTitle'
+import CardTitle from "../../components/CardTitle";
+import DetailLook from "../../components/DetailLook";
+import DetailEdit from "../../components/DetailEdit";
 const { Option } = Select;
-
 
 interface IUser {
   key: string;
@@ -26,28 +27,30 @@ interface IUser {
   title: string;
 }
 type YyglProps = {
-  form: any,
-  getYyglSearch: (value: any) => void,
-  list: any,
-  tableLoading: boolean
-}
+  form: any;
+  getYyglSearch: (value: any) => void;
+  list: any;
+  tableLoading: boolean;
+};
 class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
   constructor(props: any) {
     super(props);
     this.state = {
-      visible: false
+      visibleLook: false,
+      visibleEdit: false,
+      tableRow: {}
     };
     this.getYyglList = this.getYyglList.bind(this);
   }
-  handleSearch = (e: any):void => {
+  handleSearch = (e: any): void => {
     e.preventDefault();
     this.getYyglList();
   };
-  handleReset = ():void => {
+  handleReset = (): void => {
     this.props.form.resetFields();
     this.getYyglList();
   };
-  getYyglList():void {
+  getYyglList(): void {
     this.props.form.validateFields((err: any, values: any) => {
       console.log("form表单数据: ", values);
       values.pageNum = 1;
@@ -63,23 +66,24 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
       this.props.getYyglSearch(formData);
     });
   }
-  showModal = () => {
+  showModal = (type, row) => {
+    if (type === '查看') {
+      this.setState({
+        visibleLook: true
+      });
+    } else if (type === '编辑') {
+      this.setState({
+        visibleEdit: true
+      });
+    }
     this.setState({
-      visible: true
+      tableRow: row
     });
   };
-
-  handleOk = (e: any) => {
-    console.log(e);
+  onClose = () => {
     this.setState({
-      visible: false
-    });
-  };
-
-  handleCancel = (e: any) => {
-    console.log(e);
-    this.setState({
-      visible: false
+      visibleLook: false,
+      visibleEdit: false
     });
   };
   componentDidMount() {
@@ -122,11 +126,23 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
         key: "action",
         render: (text: string, record: any) => (
           <span>
-            <Button onClick={this.showModal} size="small">
+            <Button
+              onClick={() => {
+                this.showModal('查看', record);
+              }}
+              size="small"
+            >
               查看
             </Button>
             <Divider type="vertical" />
-            <Button size="small">编辑</Button>
+            <Button
+              onClick={() => {
+                this.showModal('编辑', record);
+              }}
+              size="small"
+            >
+              编辑
+            </Button>
           </span>
         )
       }
@@ -202,7 +218,9 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
               titleCard={<Icon type="appstore" theme="twoTone" />}
               name={"应用列表"}
               loading={tableLoading}
-              handleBtn={ () => {this.getYyglList()}}
+              handleBtn={() => {
+                this.getYyglList();
+              }}
             />
           }
           extra={
@@ -219,17 +237,26 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
             dataSource={list.toJS().list}
           />
         </Card>
-        <Modal
-          title="查看详情"
-          visible={this.state.visible}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
+        <Drawer
+          title="查看"
+          placement="right"
+          width="400"
+          closable={false}
+          onClose={this.onClose}
+          visible={this.state.visibleLook}
         >
-          <Row>
-            <Col span={12}>应用名称：</Col>
-            <Col span={12}>应用类型：</Col>
-          </Row>
-        </Modal>
+          <DetailLook data={this.state.tableRow} />
+        </Drawer>
+        <Drawer
+          title="编辑"
+          placement="right"
+          width="400"
+          closable={false}
+          onClose={this.onClose}
+          visible={this.state.visibleEdit}
+        >
+          <DetailEdit data={this.state.tableRow} />
+        </Drawer>
       </div>
     );
   }
@@ -238,7 +265,7 @@ const FormYygl = Form.create({})(Yygl);
 const mapStateToProps = (state: any) => {
   return {
     list: state.get("YyglReducer").get("list"),
-    tableLoading: state.get('YyglReducer').get('tableLoading')
+    tableLoading: state.get("YyglReducer").get("tableLoading")
   };
 };
 const mapDispatchToProps = (dispatch: any) => {
