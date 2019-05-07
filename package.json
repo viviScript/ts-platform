@@ -40,13 +40,15 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+
   "devDependencies": {
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.13.4",
     "@types/react": "^16.8.13",
     "@types/react-dom": "^16.8.4",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "standard": "^12.0.1",
     "typescript": "^3.4.3"
   },
   "proxy": "http://192.168.0.70:8084"

@@ -17,7 +17,7 @@ export const HeaderWrapper = styled.div`
     .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
         background-color: transparent;
     }
-`
+`;
 export const HeaderAvater = styled.span`
     position: relative;
     display: inline-block;
@@ -50,4 +50,4 @@ export const HeaderAvater = styled.span`
         border-radius: 500px;
         width: 100%;
     }
-`
+`;

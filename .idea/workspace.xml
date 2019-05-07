@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29291b16-ff6b-4c39-a838-9a2b695d1131" name="Default Changelist" comment="完成应用管理编辑功能&#10;优化部分代码">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="29291b16-ff6b-4c39-a838-9a2b695d1131" name="Default Changelist" comment="优化部分代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/server.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/server.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CardTitle/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardTitle/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DetailEdit/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailEdit/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DetailLook/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailLook/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DetailLook/style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DetailLook/style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/yygl/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/yygl/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/yygl/store/actionCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/yygl/store/actionCreators.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/container/yygl/store/actionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/yygl/store/actionTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CardTitle/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CardTitle/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomeHeader/style/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomeHeader/style/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logo/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/home/style/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/home/style/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/login/style/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/login/style/style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/container/yygl/style/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/container/yygl/style/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,23 +28,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/yygl/index.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="239" column="37" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <element signature="e#189#256#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/api.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state relative-caret-position="300">
+              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -54,82 +40,81 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/yygl/store/actionTypes.ts">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="366">
+              <caret line="50" column="13" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/yygl/store/actionCreators.ts">
+        <entry file="file://$PROJECT_DIR$/src/routes/config.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
               <folding>
-                <element signature="e#0#70#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DetailEdit/index.tsx">
+        <entry file="file://$PROJECT_DIR$/src/container/yygl/style/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="99" column="21" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/server.config.ts">
+        <entry file="file://$PROJECT_DIR$/src/container/home/style/style.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="13" />
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/server.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/Logo/style.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DetailLook/index.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/CardTitle/style.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DetailLook/style.ts">
+        <entry file="file://$PROJECT_DIR$/src/container/login/style/style.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/HomeHeader/style/style.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state>
+              <caret column="39" selection-start-column="39" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -175,8 +160,8 @@
       <find>getYyglList</find>
       <find>validateFields</find>
       <find>getYyglSearch</find>
-      <find>TABLE_LOADING</find>
       <find>IUser</find>
+      <find>TABLE_LOADING</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,10 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/CfLogin/store/reducer.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/index.js" />
-        <option value="$PROJECT_DIR$/src/views/home/store/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/views/home/store/reducer.js" />
         <option value="$PROJECT_DIR$/src/views/home/store/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/store/index.js" />
@@ -196,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/views/login/store/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/views/login/index.js" />
         <option value="$PROJECT_DIR$/src/routes/config.js" />
-        <option value="$PROJECT_DIR$/src/routes/index.js" />
         <option value="$PROJECT_DIR$/src/container/home/store/reducer.js" />
         <option value="$PROJECT_DIR$/src/util/index.js" />
         <option value="$PROJECT_DIR$/src/api/server.js" />
@@ -205,17 +185,14 @@
         <option value="$PROJECT_DIR$/src/api/api.js" />
         <option value="$PROJECT_DIR$/src/container/home/store/actionCreators.js" />
         <option value="$PROJECT_DIR$/src/container/login/index.js" />
-        <option value="$PROJECT_DIR$/src/container/login/style/style.js" />
         <option value="$PROJECT_DIR$/src/container/login/store/actionCreators.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/Logo.js" />
         <option value="$PROJECT_DIR$/src/components/Logo/Logo.js" />
         <option value="$PROJECT_DIR$/src/container/home/loadable.js" />
-        <option value="$PROJECT_DIR$/src/components/Logo/style.js" />
         <option value="$PROJECT_DIR$/src/components/Logo/index.js" />
         <option value="$PROJECT_DIR$/src/container/home/index.js" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/images.d.ts" />
         <option value="$PROJECT_DIR$/src/container/index.js" />
         <option value="$PROJECT_DIR$/src/store/index.tsx" />
@@ -234,8 +211,16 @@
         <option value="$PROJECT_DIR$/src/components/DetailEdit/index.tsx" />
         <option value="$PROJECT_DIR$/src/container/yygl/store/actionTypes.ts" />
         <option value="$PROJECT_DIR$/src/components/DetailLook/style.ts" />
-        <option value="$PROJECT_DIR$/src/container/yygl/store/actionCreators.ts" />
         <option value="$PROJECT_DIR$/src/container/yygl/index.tsx" />
+        <option value="$PROJECT_DIR$/src/container/yygl/store/actionCreators.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/routes/index.js" />
+        <option value="$PROJECT_DIR$/src/container/yygl/style/index.js" />
+        <option value="$PROJECT_DIR$/src/container/home/style/style.js" />
+        <option value="$PROJECT_DIR$/src/components/Logo/style.js" />
+        <option value="$PROJECT_DIR$/src/components/CardTitle/style.js" />
+        <option value="$PROJECT_DIR$/src/container/login/style/style.js" />
+        <option value="$PROJECT_DIR$/src/components/HomeHeader/style/style.js" />
       </list>
     </option>
   </component>
@@ -271,26 +256,20 @@
               <item name="ts-platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="ts-platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ts-platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ts-platform" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ts-platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="ts-platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="CardTitle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ts-platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="ts-platform" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="yygl" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -319,7 +298,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -402,7 +381,7 @@
       <workItem from="1555299760062" duration="8493000" />
       <workItem from="1555394094403" duration="3579000" />
       <workItem from="1555404879146" duration="350000" />
-      <workItem from="1557228975465" duration="7081000" />
+      <workItem from="1557228975465" duration="8578000" />
     </task>
     <task id="LOCAL-00001" summary="reducer注释">
       <created>1554902745783</created>
@@ -411,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554902745783</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成应用管理编辑功能&#10;优化部分代码">
+      <created>1557237568456</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557237568456</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86268000" />
+    <option name="totallyTimeSpent" value="87765000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,7 +422,7 @@
       <window_info id="Structure" order="3" sideWeight="0.50340134" side_tool="true" weight="0.2103677" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="1" sideWeight="0.4990099" weight="0.28630707" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.32987553" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5009901" side_tool="true" weight="0.32896304" />
       <window_info anchor="bottom" id="Message" order="5" />
@@ -470,22 +456,10 @@
     <MESSAGE value="增加router路由 优化home页面" />
     <MESSAGE value="增加home组件异步加载 &#10;增加LogoUI组件&#10;增加左侧菜单收缩展开" />
     <MESSAGE value="完成应用管理编辑功能&#10;优化部分代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成应用管理编辑功能&#10;优化部分代码" />
+    <MESSAGE value="优化部分代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化部分代码" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/config/common.const.js" />
-    <entry file="file://$PROJECT_DIR$/src/TodoList_01/TodoItem.js" />
-    <entry file="file://$PROJECT_DIR$/src/TodoList_01/TodoList.js" />
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/actionCreators.js" />
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/actionTypes.js" />
-    <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/index.js" />
     <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/index.js" />
     <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/reducer_one.js" />
     <entry file="file://$PROJECT_DIR$/src/TodoList_demo/store/reducers/reducer_two.js" />
@@ -523,13 +497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/login/style/style.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -617,27 +584,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="47" column="29" lean-forward="true" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CardTitle/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -652,16 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1777">
           <caret line="128" column="14" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/server.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,17 +636,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/server.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DetailLook/style.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="147">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CardTitle/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/yygl/store/actionCreators.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding>
             <element signature="e#0#70#0" expanded="true" />
           </folding>
@@ -715,8 +672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/yygl/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="239" column="37" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
+        <state relative-caret-position="1553">
+          <caret line="107" column="54" selection-start-line="107" selection-start-column="54" selection-end-line="107" selection-end-column="54" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#189#256#0" expanded="true" />
@@ -726,11 +683,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/api/api.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        <state relative-caret-position="300">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/yygl/style/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/home/style/style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Logo/style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CardTitle/style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/login/style/style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomeHeader/style/style.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
         </state>
       </provider>
     </entry>
