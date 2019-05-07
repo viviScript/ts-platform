@@ -36,7 +36,7 @@ export const ac_setYyglUpdate = (values: any) => {
                 message.success('应用更新成功！');
             } else {
                 message.error('应用更新失败，请重试');
-            }
+            };
             dispatch(ac_setTableLoading(false));
         })
     }
