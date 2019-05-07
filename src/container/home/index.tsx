@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import { Layout, Icon, Breadcrumb } from "antd";
+import { Layout, Icon } from "antd";
 import { connect } from "react-redux";
 import { actionCreators } from "./store";
 import { ImmuTableProps } from "../../types";
@@ -7,7 +7,6 @@ import {
   withRouter,
   RouteComponentProps,
   Route,
-  Link,
   Switch
 } from "react-router-dom";
 import {Logo, HomeHeader, HomeMenu, HomeBread} from '../../components'
@@ -15,19 +14,19 @@ import screenfull from "screenfull";
 import { Wjgl, Yygl } from "../index";
 import {HomeBreadWrapper} from './style/style'
 const { Content, Sider } = Layout;
-type HomeProps = {
+type IProps = {
   list: any[];
   getResList: () => void;
   match: any;
   breadcrumbNameMap: any
 };
-type HomeStateProps = {
+type IState = {
   collapsed: boolean;
   marginLeft: number;
 };
 class Home extends PureComponent<
-  HomeProps & RouteComponentProps,
-  HomeStateProps
+    IProps & RouteComponentProps,
+    IState
 > {
   constructor(props: any) {
     super(props);
@@ -64,7 +63,7 @@ class Home extends PureComponent<
     this.props.history.push(item_child.get("path"))
   };
   
-  public render() {
+  render() {
     const { list, breadcrumbNameMap } = this.props;
     return (
       <Layout>
