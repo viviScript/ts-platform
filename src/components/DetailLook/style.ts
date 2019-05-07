@@ -5,7 +5,7 @@ export const DetailWrapper = styled.div`
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-`
+`;
 
 export const DetailItem = styled.div`
     width: auto;
@@ -15,12 +15,12 @@ export const DetailItem = styled.div`
     justify-items: center;
     height: 40px;
     line-height: 40px;
-`
+`;
 export const DetailItemLabel = styled.div`
-    width: ${props => props.width || 'auto'};
+    width: ${(props: {width: string}) => props.width || 'auto'};
     text-align: right;
     color: #1890ff;
-`
+`;
 export const DetailItemText = styled.div`
     width: auto;
-`
+`;

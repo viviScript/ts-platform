@@ -1,7 +1,11 @@
 import React from "react";
-import { Row, Col } from "antd";
+// import { Row, Col } from "antd";
 import { DetailWrapper, DetailItem, DetailItemLabel, DetailItemText } from './style';
-function ModalLook(props) {
+interface Iprops {
+  data: any,
+  labelWidth?: string
+}
+function ModalLook(props: Iprops) {
   const { data, labelWidth = '90px' } = props;
   return (
     <div>
@@ -39,29 +43,6 @@ function ModalLook(props) {
           <DetailItemText>{data.cjsj || ""}</DetailItemText>
         </DetailItem>
       </DetailWrapper>
-      {/* <Row>
-
-      <Row>
-        <Col span={24}>应用编码：{data.yybm || ""}</Col>
-      </Row>
-      <Row>
-        <Col span={24}>登录地址：{data.fwlj || ""}</Col>
-      </Row>
-
-      <Row>
-        <Col span={24}>应用上下文：{data.yysxw || ""}</Col>
-      </Row>
-
-      <Row>
-        <Col span={24}>位置序号：{data.pxbh || ""}</Col>
-      </Row>
-
-      <Row>
-        <Col span={24}>创建人：{data.cjr || ""}</Col>
-      </Row>
-      <Row>
-        <Col span={24}>创建时间：{data.cjsj || ""}</Col>
-      </Row> */}
     </div>
   );
 }

@@ -25,14 +25,20 @@ interface IUser {
   key: string;
   name: string;
   title: string;
-}
-type YyglProps = {
+};
+interface IState {
+  visibleLook: boolean;
+  visibleEdit: boolean;
+  tableRow: any;
+};
+interface IProps {
   form: any;
   getYyglSearch: (value: any) => void;
   list: any;
   tableLoading: boolean;
+  setYyglUpdate: (value: any) => void;
 };
-class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
+class Yygl extends React.PureComponent<IProps & RouteComponentProps, IState> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -52,21 +58,23 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
   };
   getYyglList(): void {
     this.props.form.validateFields((err: any, values: any) => {
-      console.log("form表单数据: ", values);
-      values.pageNum = 1;
-      values.pageSize = 1;
-      const { yymcLike, yybmLike, yylx } = values;
-      let formData = {
-        pageNum: 1,
-        pageSize: 10,
-        yymcLike: yymcLike || "",
-        yybmLike: yybmLike || "",
-        yylx: yylx || ""
-      };
-      this.props.getYyglSearch(formData);
+      if (!err) {
+        console.log("form表单数据: ", values);
+        values.pageNum = 1;
+        values.pageSize = 1;
+        const { yymcLike, yybmLike, yylx } = values;
+        let formData = {
+          pageNum: 1,
+          pageSize: 10,
+          yymcLike: yymcLike || "",
+          yybmLike: yybmLike || "",
+          yylx: yylx || ""
+        };
+        this.props.getYyglSearch(formData);
+      }
     });
   }
-  showModal = (type, row) => {
+  showModal = (type: string, row: any) => {
     if (type === '查看') {
       this.setState({
         visibleLook: true
@@ -90,7 +98,7 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
     this.getYyglList();
   }
   render() {
-    const { form, list, tableLoading } = this.props;
+    const { form, list, tableLoading, setYyglUpdate } = this.props;
     const { getFieldDecorator } = form;
     const columns = [
       {
@@ -124,7 +132,7 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
       {
         title: "Action",
         key: "action",
-        render: (text: string, record: any) => (
+        render: (record: any) => (
           <span>
             <Button
               onClick={() => {
@@ -185,7 +193,7 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
                     style={{ width: 200 }}
                     placeholder="请选择应用类型"
                     optionFilterProp="children"
-                    filterOption={(input, option) =>
+                    filterOption={(input, option: any) =>
                       option.props.children
                         .toLowerCase()
                         .indexOf(input.toLowerCase()) >= 0
@@ -229,13 +237,7 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
             </Button>
           }
         >
-          <Table<IUser>
-            loading={tableLoading}
-            size="middle"
-            rowKey="id"
-            columns={columns}
-            dataSource={list.toJS().list}
-          />
+          <Table<IUser>  loading={tableLoading} size="middle" rowKey="id" columns={columns} dataSource={list.toJS().list}/>
         </Card>
         <Drawer
           title="查看"
@@ -255,7 +257,7 @@ class Yygl extends React.PureComponent<YyglProps & RouteComponentProps> {
           onClose={this.onClose}
           visible={this.state.visibleEdit}
         >
-          <DetailEdit data={this.state.tableRow} />
+          <DetailEdit data={this.state.tableRow} loading={tableLoading} onSubmit={setYyglUpdate} onClose={this.onClose}/>
         </Drawer>
       </div>
     );
@@ -272,6 +274,9 @@ const mapDispatchToProps = (dispatch: any) => {
   return {
     getYyglSearch(values: any) {
       dispatch(actionCreators.ac_getYyglList(values));
+    },
+    setYyglUpdate(values: any) {
+      dispatch(actionCreators.ac_setYyglUpdate(values));
     }
   };
 };

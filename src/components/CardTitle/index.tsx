@@ -1,13 +1,13 @@
 import React from 'react';
 import { CardTitleWrapper } from './style';
 import { Button } from 'antd';
-type CardTitleProps = {
+type IProps = {
     name?: string;
     titleCard?: any;
     handleBtn: () => void;
     loading?: boolean
   };
-function CardTitle(props: CardTitleProps) {
+function CardTitle(props: IProps) {
     return (
       <CardTitleWrapper>
         {props.titleCard || ""}
