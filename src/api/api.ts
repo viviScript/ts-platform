@@ -19,7 +19,7 @@ import URL from "./server.config";
 //     })
 // }
 // 登录方法
-export const getLogin = data => {
+export const getLogin = (data: any):any => {
   return server({
     url: URL.login,
     method: "post",
@@ -71,3 +71,24 @@ export const api_getYyglList = (values: any) => {
     data: values
   });
 };
+export const api_setYyglUpdate = (values: any) => {
+  return server({
+    url: URL.setUpdate,
+    method: "post",
+    transformRequest: [
+      function(data) {
+        // Do whatever you want to transform the data
+        let ret = "";
+        for (let it in data) {
+          ret +=
+              encodeURIComponent(it) + "=" + encodeURIComponent(data[it]) + "&";
+        }
+        return ret;
+      }
+    ],
+    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+    data: values
+  });
+};
+
+
