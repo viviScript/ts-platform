@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const LoginWrapper = styled.div`
   width: 300px;
   height: 500px;

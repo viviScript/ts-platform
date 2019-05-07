@@ -8,4 +8,4 @@ export const CardTitleWrapper = styled.div`
     .title {
         margin: 0 10px;
     }
-`
+`;

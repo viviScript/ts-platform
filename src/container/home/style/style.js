@@ -5,4 +5,4 @@ export const HomeBreadWrapper = styled.div`
     top: 74px;
     left: 220px;
     z-index: 200;
-`
+`;
