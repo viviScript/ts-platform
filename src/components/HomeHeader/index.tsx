@@ -1,16 +1,17 @@
 import React from "react";
 import { Layout, Menu, Icon, Badge } from "antd";
 import { HeaderWrapper, HeaderAvater } from "./style/style";
-import avater from "../../static/images/b1.jpg";
+import avater from "../../static/images/head.jpg";
 const { Header } = Layout;
 const { SubMenu, ItemGroup } = Menu;
 type props = {
-    screenFull():void
+    screenFull():void;
+    collapsed: boolean;
 }
 function HomeHeader(props: props) {
   
     return (
-      <HeaderWrapper>
+      <HeaderWrapper collapsed={props.collapsed}>
         <Header>
           <Menu theme="dark" mode="horizontal">
             <Menu.Item key="full" onClick={props.screenFull}>

@@ -92,9 +92,9 @@ class Home extends PureComponent<
         <Layout
           style={{ marginLeft: this.state.marginLeft, position: "relative" }}
         >
-          <HomeHeader screenFull={this.screenFull} />
+          <HomeHeader collapsed={this.state.collapsed} screenFull={this.screenFull} />
           
-          <HomeBreadWrapper>
+          <HomeBreadWrapper collapsed={this.state.collapsed}>
             <HomeBread breadcrumbNameMap={breadcrumbNameMap}/>
           </HomeBreadWrapper>
 

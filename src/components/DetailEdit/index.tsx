@@ -25,7 +25,7 @@ class DetailEdit extends React.PureComponent<IProps, {}> {
       });
   }
   render() {
-    console.log(this.props);
+    console.log(this.props, '编辑render');
     const {form, data, loading, onClose} = this.props;
     const { getFieldDecorator } = form;
     const {name, yylx, yybm, fwlj, yysxw, pxbh, id} = data;

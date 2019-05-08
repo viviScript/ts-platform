@@ -255,6 +255,7 @@ class Yygl extends React.PureComponent<IProps & RouteComponentProps, IState> {
           width="400"
           closable={false}
           onClose={this.onClose}
+          destroyOnClose={true}
           visible={this.state.visibleEdit}
         >
           <DetailEdit data={this.state.tableRow} loading={tableLoading} onSubmit={setYyglUpdate} onClose={this.onClose}/>

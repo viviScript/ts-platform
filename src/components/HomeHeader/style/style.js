@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.div`
     padding: 0;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: ${(props) => props.collapsed ? "calc(100% - 80px);" : "calc(100% - 200px);"};
     z-index: 200;
     .ant-layout-header {
         display: flex;
