@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import {Logo, HomeHeader, HomeMenu, HomeBread} from '../../components'
 import screenfull from "screenfull";
-import { Wjgl, Yygl } from "../index";
+import { Wjgl, Yygl, Zdgl } from "../index";
 import {HomeBreadWrapper} from './style/style'
 const { Content, Sider } = Layout;
 type IProps = {
@@ -105,6 +105,7 @@ class Home extends PureComponent<
               <Switch>
                 <Route path="/home/wjgl" component={Wjgl} />
                 <Route path="/home/yygl" component={Yygl} />
+                <Route path="/home/zdgl" component={Zdgl} />
               </Switch>
             </div>
           </Content>

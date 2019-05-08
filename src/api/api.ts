@@ -73,5 +73,10 @@ export const api_setYyglUpdate = (values: any) => {
     data: values
   });
 };
+export const api_getYyFind = () => {
+  return server.post(URL.getFind, {
+    yylx: 2
+  })
+};
 
 

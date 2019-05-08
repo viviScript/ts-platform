@@ -4,7 +4,7 @@ import { Button } from 'antd';
 type IProps = {
     name?: string;
     titleCard?: any;
-    handleBtn: () => void;
+    handleBtn?: () => void;
     loading?: boolean
   };
 function CardTitle(props: IProps) {

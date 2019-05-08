@@ -1,0 +1,1 @@
+export const YY_LIST = 'YY_LIST';
