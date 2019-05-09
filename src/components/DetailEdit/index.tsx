@@ -4,10 +4,10 @@ import { Form, Input, Select, Button, Spin } from "antd";
 const { Option } = Select;
 interface IProps {
     form: any,
-    data: any,
-    onSubmit: (value:any) => void;
+    detailRow: any,
+    detailSubmit: (value:any) => void;
     loading: boolean;
-    onClose: () => void;
+    detailClose: () => void;
 }
 class DetailEdit extends React.PureComponent<IProps, {}> {
    constructor(props: any) {
@@ -16,19 +16,20 @@ class DetailEdit extends React.PureComponent<IProps, {}> {
   }
   handleSubmit (e: any) {
       e.preventDefault();
+      const { detailSubmit, detailClose } = this.props;
       this.props.form.validateFields((err: any, values: any) => {
           if (!err) {
               console.log("form表单数据: ", values);
-              this.props.onSubmit(values);
-              this.props.onClose();
+              detailSubmit(values);
+              detailClose();
           }
       });
   }
   render() {
     console.log(this.props, '编辑render');
-    const {form, data, loading, onClose} = this.props;
+    const {form, detailRow, loading, detailClose} = this.props;
     const { getFieldDecorator } = form;
-    const {name, yylx, yybm, fwlj, yysxw, pxbh, id} = data;
+    const {name, yylx, yybm, fwlj, yysxw, pxbh, id} = detailRow;
     return (
         <div>
             <Spin spinning={loading}>
@@ -94,7 +95,7 @@ class DetailEdit extends React.PureComponent<IProps, {}> {
                 )}
                 <Form.Item style={{ textAlign: 'right' }}>
 
-                    <Button type="default" onClick={onClose}>
+                    <Button type="default" onClick={detailClose}>
                         取消
                     </Button>
                     <Button style={{ marginLeft: 8 }} type="primary" htmlType="submit">

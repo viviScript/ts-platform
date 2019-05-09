@@ -43,7 +43,7 @@ class Home extends PureComponent<
     }
   };
   toggleCollapsed = () => {
-    this.setState((preState: HomeStateProps) => {
+    this.setState((preState: IState) => {
       return {
         collapsed: !preState.collapsed
       };
