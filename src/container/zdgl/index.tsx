@@ -2,14 +2,20 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {actionCreators} from "./store";
 import {withRouter, RouteComponentProps} from 'react-router-dom';
-import {Row, Col, Menu, Icon, Button, Card, Table} from 'antd';
+import {Row, Col, Menu, Icon, Button, Card, Table, Tooltip} from 'antd';
 import SearchInput from '../components/searchInput';
 import CardTitle from "../../components/CardTitle";
-
+import { BtnItem } from './style';
 interface IProps {
     getYyFind: () => void;
     yyglList: any;
     tableLoading: boolean;
+    defaultKeys: any;
+    listTree: any;
+    selectedKeysHandle: (values: string[]) => void;
+    selectedTypeHandle: (value: string) => void;
+    selectType: string;
+    ac_getZdTreeByType: (value: any) => void;
 }
 
 interface IState {
@@ -24,82 +30,83 @@ class Zdgl extends React.PureComponent<IProps & RouteComponentProps, IState> {
     }
 
     handleSearch = (e: any): void => {
-        console.log(e)
+        console.log(e);
+        const { selectType, defaultKeys, ac_getZdTreeByType } = this.props;
+        let value = {
+            id: defaultKeys.toJS()[0],
+            type: selectType
+        };
+        ac_getZdTreeByType({...value, ...e});
     };
     handleReset = (): void => {
+        const { selectType, defaultKeys, ac_getZdTreeByType } = this.props;
+        let value = {
+            id: defaultKeys.toJS()[0],
+            type: selectType
+        };
+        ac_getZdTreeByType(value)
     };
-
+    onSelectHandle = (items: any):void => {
+        this.props.selectedKeysHandle(items.selectedKeys);
+        this.props.selectedTypeHandle(items.item.props.keyType);
+        this.props.ac_getZdTreeByType({
+            id: items.selectedKeys[0],
+            type: items.item.props.keyType
+        })
+    }
     componentDidMount(): void {
         this.props.getYyFind()
     }
 
     render() {
+
         const columns = [{
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
+            title: '字典项目',
+            dataIndex: 'mc',
+            key: 'mc',
         }, {
-            title: 'Age',
-            dataIndex: 'age',
-            key: 'age',
-            width: '12%',
+            title: '字典项值',
+            dataIndex: 'val',
+            key: 'val',
         }, {
-            title: 'Address',
-            dataIndex: 'address',
-            width: '30%',
-            key: 'address',
+            title: '字典编号',
+            dataIndex: 'bh',
+            key: 'bh',
+        }, {
+            title: '字典类型',
+            dataIndex: 'sfyhzd',
+            key: 'sfyhzd',
+        }, {
+            title: '位置序号',
+            dataIndex: 'pxbh',
+            key: 'pxbh',
+        }, {
+            title: '使用标志',
+            dataIndex: 'sybz',
+            key: 'sybz',
+        },{
+            title: '操作',
+            width: '140px',
+            render: () => {
+                return (
+                    <div>
+                        <Tooltip title="查看">
+                            <BtnItem> <Icon type="question-circle" theme="twoTone" /></BtnItem>
+                        </Tooltip>
+                        <Tooltip title="编辑">
+                            <BtnItem><Icon type="edit" theme="twoTone" /></BtnItem>
+                        </Tooltip>
+                        <Tooltip title="删除">
+                            <BtnItem><Icon type="delete" theme="twoTone" /></BtnItem>
+                        </Tooltip>
+                        <Tooltip title="新增">
+                            <BtnItem><Icon type="plus-circle" theme="twoTone" /></BtnItem>
+                        </Tooltip>
+                    </div>
+                )
+            }
         }];
 
-        const data = [{
-            key: 1,
-            name: 'John Brown sr.',
-            age: 60,
-            address: 'New York No. 1 Lake Park',
-            children: [{
-                key: 11,
-                name: 'John Brown',
-                age: 42,
-                address: 'New York No. 2 Lake Park',
-            }, {
-                key: 12,
-                name: 'John Brown jr.',
-                age: 30,
-                address: 'New York No. 3 Lake Park',
-                children: [{
-                    key: 121,
-                    name: 'Jimmy Brown',
-                    age: 16,
-                    address: 'New York No. 3 Lake Park',
-                }],
-            }, {
-                key: 13,
-                name: 'Jim Green sr.',
-                age: 72,
-                address: 'London No. 1 Lake Park',
-                children: [{
-                    key: 131,
-                    name: 'Jim Green',
-                    age: 42,
-                    address: 'London No. 2 Lake Park',
-                    children: [{
-                        key: 1311,
-                        name: 'Jim Green jr.',
-                        age: 25,
-                        address: 'London No. 3 Lake Park',
-                    }, {
-                        key: 1312,
-                        name: 'Jimmy Green sr.',
-                        age: 18,
-                        address: 'London No. 4 Lake Park',
-                    }],
-                }],
-            }],
-        }, {
-            key: 2,
-            name: 'Joe Black',
-            age: 32,
-            address: 'Sidney No. 1 Lake Park',
-        }];
         const rowSelection = {
             onChange: (selectedRowKeys, selectedRows) => {
                 console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
@@ -111,20 +118,19 @@ class Zdgl extends React.PureComponent<IProps & RouteComponentProps, IState> {
                 console.log(selected, selectedRows, changeRows);
             },
         };
-        const {yyglList, tableLoading} = this.props;
+        const {yyglList, tableLoading, defaultKeys, listTree} = this.props;
         return (
             <div>
                 <Row gutter={16}>
                     <Col span={4}>
                         <Menu
-                            // style={{ width: 256 }}
-                            defaultSelectedKeys={['1']}
-                            defaultOpenKeys={['sub1']}
+                            selectedKeys={defaultKeys.toJS()}
                             mode="inline"
+                            onSelect={this.onSelectHandle}
                         >
                             {
                                 yyglList.map((item: any) => {
-                                    return <Menu.Item key={item.get('id')}>{item.get('yymc')}</Menu.Item>
+                                    return <Menu.Item keyType={item.get('type')} key={item.get('id')}>{item.get('yymc')}</Menu.Item>
                                 })
                             }
                         </Menu>
@@ -155,7 +161,7 @@ class Zdgl extends React.PureComponent<IProps & RouteComponentProps, IState> {
 
                             }
                         >
-                            <Table columns={columns} rowSelection={rowSelection} dataSource={data} />,
+                            <Table loading={tableLoading} columns={columns} rowSelection={rowSelection} dataSource={listTree.toJS()} />,
                         </Card>
                     </Col>
                 </Row>
@@ -166,14 +172,26 @@ class Zdgl extends React.PureComponent<IProps & RouteComponentProps, IState> {
 
 const mapStateToProps = (state: any) => {
     return {
-        yyglList: state.get('ZdglReducer').get('yyglList'),
-        tableLoading: state.get('ZdglReducer').get('tableLoading')
+        yyglList: state.get('zdglReducer').get('yyglList'),
+        tableLoading: state.get('zdglReducer').get('tableLoading'),
+        defaultKeys: state.get('zdglReducer').get('defaultKeys'),
+        listTree: state.get('zdglReducer').get('listTree'),
+        selectType: state.get('zdglReducer').get('selectType')
     }
 };
 const mapDispatchToProps = (dispatch: any) => {
     return {
         getYyFind: () => {
             dispatch(actionCreators.ac_getYyFind())
+        },
+        ac_getZdTreeByType: (values: any) => {
+            dispatch(actionCreators.ac_getZdTreeByType(values))
+        },
+        selectedKeysHandle: (values: string[]) => {
+            dispatch(actionCreators.ac_defaultSelectedKeys(values))
+        },
+        selectedTypeHandle: (values: string) => {
+            dispatch(actionCreators.ac_selectType(values))
         }
     }
 };

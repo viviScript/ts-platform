@@ -272,8 +272,8 @@ class Yygl extends React.PureComponent<IProps & RouteComponentProps, IState> {
 const FormYygl = Form.create({})(Yygl);
 const mapStateToProps = (state: any) => {
   return {
-    list: state.get("YyglReducer").get("list"),
-    tableLoading: state.get("YyglReducer").get("tableLoading")
+    list: state.get("yyglReducer").get("list"),
+    tableLoading: state.get("yyglReducer").get("tableLoading")
   };
 };
 const mapDispatchToProps = (dispatch: any) => {

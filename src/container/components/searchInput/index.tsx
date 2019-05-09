@@ -22,6 +22,7 @@ class SearchInput extends React.PureComponent<IProps> {
     };
     handleReset = () => {
         this.props.form.resetFields();
+        this.props.handleReset()
     };
     render() {
         const { form} = this.props;

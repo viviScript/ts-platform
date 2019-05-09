@@ -12,5 +12,6 @@ export default {
     getRes: HISTORY + 'system/frame/auth/getRes',  // 菜单
     getFindPage: HISTORY + 'system/yy/findPage',  // 应用管理列表
     setUpdate: HISTORY + 'system/yy/update',  // 应用管理编辑
-    getFind: HISTORY + 'system/yy/find'  // 查找应用
+    getFind: HISTORY + 'system/yy/find',  // 查找应用
+    getZdTreeByType: HISTORY + 'system/zd/getZdTreeByType'  // 查找应用
 };

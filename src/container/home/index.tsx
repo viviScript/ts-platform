@@ -114,9 +114,11 @@ class Home extends PureComponent<
     );
   }
   componentWillMount() {
+
+  }
+  componentDidMount() {
     this.props.getResList();
   }
-  componentDidMount() {}
 }
 
 const mapStateToProps = (state: ImmuTableProps): object => {

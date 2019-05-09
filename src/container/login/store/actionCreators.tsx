@@ -1,6 +1,7 @@
 import * as actionTypes from './actionTypes';
 import { fromJS } from 'immutable';
-import {setSession, removeSession} from "../../../util";
+import axios from 'axios';
+import {setSession, removeSession, getSession} from "../../../util";
 import {USER_TOKEN} from "../../../config/common.const";
 import {message} from "antd";
 import {
@@ -29,6 +30,7 @@ export const ac_getLoginSubmit = (props:any) => {
             console.log(res, '登录');
             if (res.data.code === '200') {
                 setSession(USER_TOKEN, res.data.data);
+                axios.defaults.headers['Authorization'] = 'bearer ' + getSession(USER_TOKEN);
                 message.success('恭喜您，登录成功！');
                 props.history.push('/home')
             } else {

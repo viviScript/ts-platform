@@ -1,6 +1,5 @@
 import server from "./server";
 import URL from "./server.config";
-
 // 登录方法
 export const getLogin = (data: any):any => {
   return server({
@@ -78,5 +77,29 @@ export const api_getYyFind = () => {
     yylx: 2
   })
 };
-
+export const api_getZdTreeByType = (values: any) => {
+  return server({
+    url: URL.getZdTreeByType,
+    method: "post",
+    transformRequest: [
+      function(data) {
+        // Do whatever you want to transform the data
+        let ret = "";
+        for (let it in data) {
+          ret +=
+              encodeURIComponent(it) + "=" + encodeURIComponent(data[it]) + "&";
+        }
+        return ret;
+      }
+    ],
+    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+    data: {
+      yyid: values.id,
+      type: values.type,
+      mcLike: values.mcLike || '',
+      valLike: values.valLike || '',
+      bhLike: values.bhLike || '',
+    }
+  });
+};
 
